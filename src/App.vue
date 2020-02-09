@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view/>
+
+    <van-tabbar route>
+      <van-tabbar-item replace to="/home" icon="wap-home-o">
+        首页
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/category" icon="apps-o">
+        分类
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/cart" icon="cart-o">
+        购物车
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/profile" icon="contact">
+        我的
+      </van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
+  import {Tabbar, TabbarItem} from 'vant';
 
   export default {
     name: 'App',
     components: {
-      HelloWorld
-    }
+      [Tabbar.name]: Tabbar,
+      [TabbarItem.name]: TabbarItem,
+    },
+    data() {
+      return {
+        active: 0
+      }
+    },
   }
 </script>
 
 <style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
+  @import "assets/css/base.css";
 </style>
