@@ -1,11 +1,31 @@
 <template>
-<div>pro</div>
+  <div>
+    <van-nav-bar title="我的"/>
+    <pf-info/>
+    <pf-price/>
+    <pf-cell :info="{icon:'comment-o',text:'消息'}"/>
+    <pf-cell :info="{icon:'points',text:'积分'}"/>
+    <pf-cell class="border-b" :info="{icon:'gem-o',text:'会员'}"/>
+    <pf-cell :info="{icon:'shopping-cart-o',text:'购物车'}"/>
+    <pf-cell :info="{icon:'bag-o',text:'下载APP'}"/>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Profile"
-    }
+  import {NavBar} from 'vant';
+  import PfInfo from "@/views/profile/childComps/PfInfo";
+  import PfPrice from "@/views/profile/childComps/PfPrice";
+  import PfCell from "@/views/profile/childComps/PfCell";
+
+  export default {
+    name: "Profile",
+    components: {
+      [NavBar.name]:NavBar,
+      PfInfo,
+      PfPrice,
+      PfCell
+    },
+  }
 </script>
 
 <style scoped>

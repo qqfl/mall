@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from "@/views/home/Home";
-import Category from "@/views/category/Category";
-import Cart from "@/views/cart/Cart";
-import Profile from "@/views/profile/Profile";
+const Home = () => import('@/views/home/Home');
+const Category = () => import('@/views/category/Category');
+const Cart = () => import('@/views/cart/Cart');
+const Profile = () => import('@/views/profile/Profile');
+const Detail = () => import('@/views/detail/Detail');
 
 Vue.use(VueRouter);
 
@@ -13,7 +14,8 @@ const routes = [
   {path: '/home', component: Home, meta: {title: '首页'}},
   {path: '/category', component: Category, meta: {title: '分类'}},
   {path: '/cart', component: Cart, meta: {title: '购物车'}},
-  {path: '/profile', component: Profile, meta: {title: '我的'}}
+  {path: '/profile', component: Profile, meta: {title: '我的'}},
+  {path: '/detail/:id', component: Detail, meta: {title: '商品详情'}},
 ];
 
 const router = new VueRouter({
