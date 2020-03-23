@@ -4,7 +4,7 @@
       <van-grid-item v-for="(item, index) in typeData[activeKey]" :key="index">
         <router-link :to="'/detail/'+index%3">
           <img :src="item.img" :alt="item.tit">
-          <span>{{item.tit}}</span>
+          <div class="productName">{{item.tit}}</div>
         </router-link>
       </van-grid-item>
     </van-grid>
@@ -50,5 +50,8 @@
     right: 0;
     overflow-y: auto;
     z-index: 1;
+  }
+  .productName{
+    text-align: center;
   }
 </style>
