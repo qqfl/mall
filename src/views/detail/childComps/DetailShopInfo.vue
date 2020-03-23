@@ -48,4 +48,7 @@
     display: inline-block;
     vertical-align: middle;
   }
+  .border-b .van-cell__right-icon{
+    transform: translateY(100%);
+  }
 </style>
