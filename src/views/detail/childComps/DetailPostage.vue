@@ -7,6 +7,7 @@
     </van-cell>
     <van-popup
       :overlay-style="{'background-color':'rgba(0,0,0,.4)'}"
+      closeable
       v-model="show"
       position="bottom"
       :style="{ 'max-height': '70%' }"
