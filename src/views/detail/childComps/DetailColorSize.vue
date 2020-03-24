@@ -6,6 +6,7 @@
     <van-popup
       :overlay-style="{'background-color':'rgba(0,0,0,.4)'}"
       v-model="show"
+      closeable
       position="bottom"
       :style="{'overflow-y':'unset'}"
     >
