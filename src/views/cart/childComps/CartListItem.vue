@@ -9,7 +9,7 @@
       :thumb="cartItem.imgURL"
     >
       <div slot="footer">
-        <van-button size="mini" type="danger" @click="delProduct(cartItem.id)">删除</van-button>
+        <van-button size="mini" type="danger" color="rgb(255, 87, 119)" @click="delProduct(cartItem.id)">删除</van-button>
       </div>
     </van-card>
   </div>

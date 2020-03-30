@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import {SubmitBar,Checkbox} from 'vant';
+  import {SubmitBar, Checkbox} from 'vant';
 
   import {mapGetters} from 'vuex';
 
@@ -29,27 +29,27 @@
       onSubmit() {
         console.log(333)
       },
-      selectAll(){
-        if (this.checkedAll){  //全选中时
+      selectAll() {
+        if (this.checkedAll) {  //全选中时
           this.cartList.forEach(item => item.checked = false);
-        }else {   //部分或全部不选中
+        } else {   //部分或全部不选中
           this.cartList.forEach(item => item.checked = true);
         }
       }
     },
     computed: {
       ...mapGetters(['cartList']),
-      totalPrice(){
+      totalPrice() {
         return this.cartList
           .filter(item => item.checked)
-          .reduce((preValue,item) => {
+          .reduce((preValue, item) => {
             return preValue + item.newPrice * item.num
-          },0).toFixed(2)
+          }, 0).toFixed(2)
       },
-      totalCount(){
+      totalCount() {
         return this.cartList.filter(item => item.checked).length
       },
-      checkedAll(){
+      checkedAll() {
         if (this.cartList.length === 0) return false;
         return !this.cartList.find(item => !item.checked);
       }
@@ -58,5 +58,7 @@
 </script>
 
 <style scoped>
-
+  .van-submit-bar__button--danger {
+    background: linear-gradient(to right, rgb(255, 164, 186), rgb(255, 87, 119));
+  }
 </style>

@@ -42,4 +42,7 @@
 
 <style>
   @import "assets/css/base.css";
+  .van-tabbar-item--active{
+    color: #fc275a;
+  }
 </style>
