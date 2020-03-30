@@ -2,7 +2,7 @@
   <div>
     <van-nav-bar title="我的"/>
     <pf-info/>
-    <pf-price/>
+    <pf-price :price="price" :discount="discount" :point="point"/>
     <pf-cell :info="{icon:'comment-o',text:'消息'}"/>
     <pf-cell :info="{icon:'points',text:'积分'}"/>
     <pf-cell class="border-b" :info="{icon:'gem-o',text:'会员'}"/>
@@ -24,6 +24,13 @@
       PfInfo,
       PfPrice,
       PfCell
+    },
+    data() {
+      return {
+        price: 0,
+        discount: 0,
+        point: 0,
+      }
     },
   }
 </script>

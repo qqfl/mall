@@ -1,5 +1,5 @@
 <template>
-  <van-cell is-link class="my">
+  <van-cell is-link class="my" center>
     <template slot="title">
       <van-icon name="user-circle-o" class="icon" />
       <div class="info">
@@ -46,6 +46,5 @@
   }
   .van-cell__right-icon{
     color: #ffffff;
-    margin-top: 17px;
   }
 </style>
